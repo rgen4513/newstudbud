@@ -1,0 +1,19 @@
+{
+  "name": "newstudbud",
+  "version": "1.0.0",
+  "description": "new repo for studbud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgen4513/newstudbud.git"
+  },
+  "author": "rg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgen4513/newstudbud/issues"
+  },
+  "homepage": "https://github.com/rgen4513/newstudbud#readme"
+}
