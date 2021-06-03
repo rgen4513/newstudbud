@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rgen4513/newstudbud/issues"
   },
-  "homepage": "https://github.com/rgen4513/newstudbud#readme"
+  "homepage": "https://github.com/rgen4513/newstudbud#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
