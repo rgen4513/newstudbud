@@ -1,18 +1,40 @@
-.test {
-    text-align: center;
-    font-family: 'Roboto', sans-serif
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.test_inside_1, .test_inside_2 {
-    text-align: center;
-    padding: 3rem;
-    background-color: aquamarine;
-    width: 10rem;
-    height:10rem;
-}
-
-.testbox {
+main {
+    height: 100vh;
+    background: linear-gradient(to right top, #aebbfc,#e2b9ed);
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
 
+.frame {
+    background: white;
+    min-height: 90vh;
+    width: 80%;
+    background: linear-gradient(
+        to left bottom, 
+        rgba(255, 255, 255,0.7), 
+        rgba(255,255,255,0.5)
+    );
+    border-radius: 1.5rem;
+    display:flex;
+}
+
+.nav {
+    background-color: white;
+    opacity: 0.2;
+    flex: 1;
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+.focus {
+    background-color: pink;
+    flex: 4;
+}
+ 
