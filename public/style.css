@@ -7,14 +7,13 @@
 
 main {
     height: 100vh;
-    background: linear-gradient(to right top, #aebbfc,#e2b9ed);
+    background: linear-gradient(to right top, #9050de,#7dc0f0);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .frame {
-    background: white;
     min-height: 90vh;
     width: 80%;
     background: linear-gradient(
@@ -27,18 +26,21 @@ main {
 }
 
 .nav {
-    background-color: white;
-    flex: 1;
     border-radius: 1.5rem 0rem 0rem 1.5rem;
     text-align: center;
     display: flex;
     justify-content:space-between;
     flex-direction: column;
+    flex: 1;
 }
 
 .focus {
-    background-color: pink;
-    flex: 4;
+    background: linear-gradient(
+        to left bottom, 
+        rgba(255, 255, 255, 0.4), 
+        rgba(255, 255, 255, 0.2)
+    );
+    flex: 5;
 }
 
 .tasklist {
@@ -47,7 +49,7 @@ main {
         rgba(255, 255, 255,0.7), 
         rgba(255,255,255,0.5)
     );;
-    flex: 1;
+    flex: 2;
     border-radius: 0rem 1.5rem 1.5rem 0rem;
 }
 
@@ -62,7 +64,7 @@ main {
   .testDiv {
     width:10em;
     text-align: center;
-    background-color: lightgrey;
+    background-color: white;
     padding: 0.4em;
   }
   
@@ -75,4 +77,31 @@ main {
 
   .media_player {
     border-radius: 1.5rem 1.5rem 0rem 1.5rem;
+  }
+
+  .red_square, .blue_square, .green_square {
+      align-items: center;
+  }
+
+  .red_square {
+      background-color: red;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      z-index: 6;
+  }
+
+  .blue_square {
+      background-color: blue;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      z-index: 5;
+  }
+
+  .green_square {
+      background: green;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
   }
