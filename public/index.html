@@ -13,14 +13,46 @@
       <div class="frame"> 
         <div class="nav">
           <h1> STUDBUD</h1>
+          <iframe class = "media_player" src="https://open.spotify.com/embed/playlist/59LUwJVpBHWjxyKDDuz4Ld" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
         <div class="focus">
           <h2>main area</h2> 
+          <ul id="tasklist">
+          </ul>
         </div>
         <div class="tasklist">
-          <h2>task list</h2> 
+          <h2>Task List</h2> 
+          <div class=formDiv>
+            <form id="taskform">
+              <label for="taskname"><b>Task Name:</b></label>
+              <input type="text" id="taskInput" name="fname">
+              <br>
+              <!--Date Input-->
+              <label for="dueDate"> <b>Due Date: </b></label>
+              <input type="date" name="dueDate" id="dueDateInput">
+              <br>
+              <!--Time Input-->
+              <label for="completionTime"><b>Completion Time:</b> </label>
+              <input type="time" name="completionTime" id="completionTimeInput">
+              <br>
+              <label for="estimatedTime"><b>Estimated Completion Time (in mins):</b> </label>
+              <input type="number" name="estimatedTime" id="estimatedTimeInput">
+              <!--Priority Input-->
+              <br>
+              <label for="priority"><b>Task Priority:</b></label>
+              <select name="priority" id="priorityInput">
+                <option value="">Select One</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+              <br>
+              <button id="myButton">Submit</button>
+            </form>
+            </div>
         </div>
       </div>
     </main>>
+    <script src="script.js"></script>
   </body>
 </html>
