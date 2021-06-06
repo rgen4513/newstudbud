@@ -11,9 +11,22 @@
   <body>
     <main>
       <div class="frame"> 
+        <div class="top">
+          <h1> STUDBUD </h1>
+          <div class="stopwatch">
+            <h2>00:00:00 </h2> 
+            <button> Start </button>
+            <button> Stop </button>
+          </div>
+        </div>
+        <div class="bottom">
           <div class="nav">
-          <h1> STUDBUD</h1>
-          <iframe class = "media_player" src="https://open.spotify.com/embed/playlist/59LUwJVpBHWjxyKDDuz4Ld" width="290" height="180" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="options">
+              <button> Covey Quadrants</button>
+              <button> Pomodoro Timer</button>
+              <button> Dictionary</button>
+            </div>
+          <iframe class = "media_player" src="https://open.spotify.com/embed/playlist/59LUwJVpBHWjxyKDDuz4Ld" width="290" height="260" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
           <div class="focus">
           <div class="red_square">
@@ -22,8 +35,6 @@
           </div>
           <div class="green_square">
           </div>
-          <ul id="tasklist">
-          </ul>
           </div>
           <div class="tasklist">
           <h2>Task List</h2> 
@@ -55,7 +66,10 @@
               <button id="myButton">Submit</button>
             </form>
          </div>
+         <ul id="tasklist">
+        </ul>
         </div>
+      </div>  
       </div>
     </main>>
     <script src="script.js"></script>
