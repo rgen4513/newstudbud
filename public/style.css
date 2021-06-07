@@ -32,7 +32,7 @@ main {
 
 .top {
     flex: 1;
-    background-color: rgba(232, 232, 232,0);
+    background-color: rgba(232, 232, 232,0.);
     border-radius: 1.5rem 1.5rem 0rem 0rem;
     align-items: center;
     display: flex;
@@ -61,8 +61,28 @@ main {
 .options {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     flex: 1;
+    margin: 0.4rem;
+}
+
+.side_button {
+background-color: rgba(255,255,255,0.7);
+  border: none;
+  color: grey;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.side_button:hover {
+  background-color: rgba(255,255,255,1);
+  border: none;
+  color: black;
 }
 
 .media_player {
@@ -117,30 +137,24 @@ main {
     border-style: inset;
   }
 
-  
-
   .red_square, .blue_square, .green_square {
-      text-align: center;
-      width: 28rem;
-      height:28rem;
+      align-items: center;
+      width: 20%;
+      height: 20%;
+      position: absolute;
   }
 
   .red_square {
       background-color: lightcoral;
-      
-      position: absolute;
-      z-index: 6;
+      z-index: 8;
   }
 
   .blue_square {
       background-color: lightgray;
-      
-      position: absolute;
       z-index: 5;
   }
 
   .green_square {
       background: lightskyblue;
       z-index: 7;
-      position: absolute;
   }
