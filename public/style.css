@@ -25,22 +25,43 @@ main {
     border-radius: 1.5rem;
     display:flex;
     flex-direction: column;
+    /*padding: 1em;*/
     border-style: solid;
-    border-width: 0.7em;
+    border-width: 0.2em;
     border-color: rgba(255, 255, 255,0.8);
 }
 
 .top {
     flex: 1;
-    background-color: rgba(232, 232, 232,0.);
+    /*background-color: rgba(232, 232, 232,0.);*/
+    background-color: rgba(255,255,255.0.1);
     border-radius: 1.5rem 1.5rem 0rem 0rem;
     align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.stopwatch {
+#logo {
+margin-left: 3.5rem;
+margin-top: 1rem;
+}
+
+.stopwatch_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(43,11,102,0.5);
+  /*mix-blend-mode: multiply;*/
+  padding: 0.7em;
+  border-radius: 0.3em;
+
+}
+
+#stopwatch {
     display: flex;
+    font-size: 2em;
+    /*margin-right: 2em;*/
+    color: lightblue;
 }
 
 .bottom {
@@ -101,7 +122,7 @@ background-color: rgba(255,255,255,0.7);
 }
 
 .tasklist {
-    background-color: linear-gradient(
+    background: linear-gradient(
         to left bottom, 
         rgba(255, 255, 255,0.7), 
         rgba(255,255,255,0.5)
@@ -135,26 +156,4 @@ background-color: rgba(255,255,255,0.7);
     );
     border-radius: 1em;
     border-style: inset;
-  }
-
-  .red_square, .blue_square, .green_square {
-      align-items: center;
-      width: 20%;
-      height: 20%;
-      position: absolute;
-  }
-
-  .red_square {
-      background-color: lightcoral;
-      z-index: 8;
-  }
-
-  .blue_square {
-      background-color: lightgray;
-      z-index: 5;
-  }
-
-  .green_square {
-      background: lightskyblue;
-      z-index: 7;
   }
