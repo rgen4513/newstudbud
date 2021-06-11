@@ -13,6 +13,10 @@ h3 {
   color:rgba(255, 255, 255, 0.2);
 }
 
+h4 {
+  color: lightblue;
+}
+
 main {
     height: 100vh;
     background: linear-gradient(to right top, #9050de,#7dc0f0);
@@ -207,7 +211,7 @@ background-color: rgba(255,255,255,0.7);
   
   .formDiv {
     margin: 2em;
-    line-height: 2em;
+    line-height: 1.7em;
     background-color: linear-gradient(
         to left bottom, 
         rgba(255, 255, 255,0.7), 
@@ -215,6 +219,7 @@ background-color: rgba(255,255,255,0.7);
     );
     border-radius: 1em;
     border-style: none;
+    font-size: 0.95em;
   }
 
   .task_holder {

@@ -17,6 +17,7 @@
         <div class="top">
           <img src="images/bigstudbud.png" id="logo" alt="Logo" width=150 height=auto>
           <div class="stopwatch_container">
+            <h4> Stopwatch </h4>
           <div id="stopwatch">
             00:00:00 
           </div>
@@ -67,34 +68,34 @@
           </div>
           </div>
           <div class="tasklist">
-          <div class=formDiv>
-            <form id="taskform">
-              <label for="taskname"><b>Task Name:</b></label>
-              <input type="text" id="taskInput" name="fname">
-              <br>
-              <!--Date Input-->
-              <label for="dueDate"> <b>Due Date: </b></label>
-              <input type="date" name="dueDate" id="dueDateInput">
-              <br>
-              <!--Time Input-->
-              <label for="completionTime"><b>Completion Time:</b> </label>
-              <input type="time" name="completionTime" id="completionTimeInput">
-              <br>
-              <label for="estimatedTime"><b>Estimated Completion Time (in mins):</b> </label>
-              <input type="number" name="estimatedTime" id="estimatedTimeInput">
-              <!--Priority Input-->
-              <br>
-              <label for="priority"><b>Task Priority:</b></label>
-              <select name="priority" id="priorityInput">
-                <option value="">Select One</option>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-              </select>
-              <br>
-              <button id="myButton">Submit</button>
-            </form>
-         </div>
+            <div class=formDiv>
+              <form id="taskform">
+                <label for="taskname"><b>Task Name:</b></label>
+                <input type="text" id="taskInput" name="fname">
+                <br>
+                <!--Date Input-->
+                <label for="dueDate"> <b>Due Date: </b></label>
+                <input type="date" name="dueDate" id="dueDateInput">
+                <br>
+                <!--Time Input-->
+                <label for="completionTime"><b>Completion Time:</b> </label>
+                <input type="time" name="completionTime" id="completionTimeInput">
+                <br>
+                <label for="estimatedTime"><b>Estimated Completion Time (in mins):</b> </label>
+                <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                <!--Priority Input-->
+                <br>
+                <label for="priority"><b>Task Priority:</b></label>
+                <select name="priority" id="priorityInput">
+                  <option value="">Select One</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+                <br>
+                <button id="myButton">Submit</button>
+              </form>
+           </div>
          <div class="task_holder">
          <ul id="tasklist">
         </ul>

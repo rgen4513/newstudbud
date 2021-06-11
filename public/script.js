@@ -88,7 +88,7 @@ function renderTask(task){
   break;
  }
 
- item.innerHTML = "<div class=testDiv>" + "<p>" + "<h2>" + task.name + "</h2>" + "<br>" + "Due on the " + task.duedate.slice(8,10) + " of " +  month + " at " + task.dueTime + "<br>" + "Priority: " + task.priority + "<br>" + "Will take " + task.estimatedtime + " mins to complete" + "<br>" + "</p>" + "</div>";
+ item.innerHTML = "<div class=testDiv>" + "<p>" + "<h2>" + task.name + "</h2>" + "Due on the " + task.duedate.slice(8,10) + " of " +  month + " at " + task.dueTime + "<br>" + "Priority: " + task.priority + "<br>" + "Will take " + task.estimatedtime + " mins to complete" + "<br>" + "</p>" + "</div>";
  
 console.log(month);
 
