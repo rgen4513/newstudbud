@@ -7,9 +7,19 @@ var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 var tasklist = document.getElementById("tasklist");
 
+var covey1 = document.getElementById("top_left_list");
+var covey2 = document.getElementById("top_right_list");
+var covey3 = document.getElementById("bottom_left_list");
+var covey4 = document.getElementById("bottom_right_list");
+
 var covey_button = document.getElementById("covey_button");
 var pomodoro_button = document.getElementById("pomodoro_button");
 var dictionary_button = document.getElementById("dictionary_button");
+
+var request = new XMLHttpRequest();
+var word;
+
+//request.open('GET', https://api.dictionaryapi.dev/api/v2/entries/en_US/word);
 
 button.addEventListener("click", function(event){
   event.preventDefault();
@@ -46,6 +56,8 @@ function addTask(nam,due,prior,dueTime,estdtime,stat) {
 function renderTask(task){
 //Create elements
  let item = document.createElement("li");
+
+ let coveyItem = document.createElement("li");
  //item.innerHTML = "<div class=testDiv>" "</div>";
  var month;
 
@@ -90,9 +102,27 @@ function renderTask(task){
 
  item.innerHTML = "<div class=testDiv>" + "<p>" + "<h2>" + task.name + "</h2>" + "Due on the " + task.duedate.slice(8,10) + " of " +  month + " at " + task.dueTime + "<br>" + "Priority: " + task.priority + "<br>" + "Will take " + task.estimatedtime + " mins to complete" + "<br>" + "</p>" + "</div>";
  
-console.log(month);
+ coveyItem.innerHTML = "<div class=covey_item>" + "<p>" +  task.name + " due " + task.duedate.slice(8,10) + " of " +  month +"</p>" + "</div>";
 
+// append task to the task list ul
  tasklist.appendChild(item);
+ 
+ //switch case to decide which quadrant to append task to - using some logic
+switch (task.priority) {
+case "High" :
+  covey1.appendChild(coveyItem);
+  break;
+  case "Medium" :
+  covey2.appendChild(coveyItem);
+  break;
+  case "Low":
+  covey3.appendChild(coveyItem);
+  break;
+  case "":
+  covey3.appendChild(coveyItem);
+}
+
+ //covey4.appendChild(coveyItem);
 
   //extra task elements
   let delButton = document.createElement("button");
@@ -104,6 +134,7 @@ console.log(month);
  delButton.addEventListener("click", function(event) {
   event.preventDefault();
   item.remove();
+  coveyItem.remove();
 })
   //clear input form
 form.reset();
@@ -114,7 +145,7 @@ var hr = 0, min = 0, sec = 0;
 var timer;
 
 var stopWatch = document.getElementById("stopwatch");
-var startButton = document.getElementById("Start");
+var startButton = document.getElementById("Start");    
 var stopButton = document.getElementById("Stop");
 var resetButton = document.getElementById("Reset");
 
@@ -218,5 +249,6 @@ function pomReset() {
   pomodoro.innerHTML = (pMin < 10 ? "0" + pMin : pMin) + ":" + (pSec < 10 ? "0" + pSec : pSec);
 }
 
-/* Covey Quadrants */
+/* Dictionary */
+
 
