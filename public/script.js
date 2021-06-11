@@ -47,8 +47,51 @@ function renderTask(task){
 //Create elements
  let item = document.createElement("li");
  //item.innerHTML = "<div class=testDiv>" "</div>";
- item.innerHTML = "<div class=testDiv>" + "<p>" + task.name + "<br>" + "Is due on the" + task.duedate + "<br>" + task.priority + "<br>" + task.dueTime + "<br>" + task.estimatedtime + "<br>" + task.status + "</p>" + "</div>";
+ var month;
+
+ switch (task.duedate.slice(5,7)) {
+   case '01':
+     month = "January";
+     break;
+   case '02':
+     month = "February"
+     break;
+   case '03':
+    month = "March"
+    break;
+   case '04':
+    month = 'April'
+   break;
+   case '05':
+     month = "May";
+     break;
+   case '06':
+     month = "June"
+     break;
+   case '07':
+    month = "July"
+    break;
+   case '08':
+    month = 'August'
+   break;
+   case '09':
+    month = "September";
+    break;
+  case '10':
+    month = "October"
+    break;
+  case '11':
+   month = "November"
+   break;
+  case '12':
+   month = 'December'
+  break;
+ }
+
+ item.innerHTML = "<div class=testDiv>" + "<p>" + "<h2>" + task.name + "</h2>" + "<br>" + "Due on the " + task.duedate.slice(8,10) + " of " +  month + " at " + task.dueTime + "<br>" + "Priority: " + task.priority + "<br>" + "Will take " + task.estimatedtime + " mins to complete" + "<br>" + "</p>" + "</div>";
  
+console.log(month);
+
  tasklist.appendChild(item);
 
   //extra task elements
@@ -80,6 +123,7 @@ startButton.addEventListener("click", start);
 
 /* Create function to run update second */
 function start() {
+  console.log("its running");
   if (!timer) {
     timer = setInterval(run,1000);
   }
@@ -121,3 +165,58 @@ function reset() {
 
   stopWatch.innerHTML = (hr < 10 ? "0" + hr : hr) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
 }
+
+
+
+/* Pomodoro Timer */
+var pHr = 0, pMin = 0, pSec = 0;
+var pTimer;
+
+var pomodoro = document.getElementById("pomodoro");
+var startPom = document.getElementById("pom_start");
+var stopPom = document.getElementById("pom_stop");
+var resetPom = document.getElementById("pom_reset");
+
+startPom.addEventListener("click", pomStart);
+
+function pomStart() {
+  if (!pTimer) {
+    pTimer = setInterval(runPom,1000);
+  }
+}
+
+function runPom() {
+  pomodoro.innerHTML =  (pMin < 10 ? "0" + pMin : pMin) + ":" + (pSec < 10 ? "0" + pSec : pSec);
+  pSec++;
+  /* Create conditionals to */
+  if(pSec == 60) {
+    pSec = 0;
+    pMin++;
+  } 
+  if(pMin == 60) {
+    pMin = 0;
+    pHr++;
+  }
+}
+
+stopPom.addEventListener("click", pomStop);
+/* Create function to stop timer*/
+function pomStop() {
+  clearInterval(pTimer);
+  pTimer = false;
+}
+
+resetPom.addEventListener("click", pomReset);
+/* Create function to reset values*/
+function pomReset() {
+  clearInterval(pTimer);
+  pTimer = false;
+
+  pSec = 0;
+  pMin = 0;
+ 
+  pomodoro.innerHTML = (pMin < 10 ? "0" + pMin : pMin) + ":" + (pSec < 10 ? "0" + pSec : pSec);
+}
+
+/* Covey Quadrants */
+
