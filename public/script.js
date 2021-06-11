@@ -197,8 +197,6 @@ function reset() {
   stopWatch.innerHTML = (hr < 10 ? "0" + hr : hr) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
 }
 
-
-
 /* Pomodoro Timer */
 var pHr = 0, pMin = 0, pSec = 0;
 var pTimer;
@@ -228,6 +226,7 @@ function runPom() {
     pMin = 0;
     pHr++;
   }
+  setInterval(function runPom(), 1500000);
 }
 
 stopPom.addEventListener("click", pomStop);
